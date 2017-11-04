@@ -1,0 +1,15 @@
+{
+   "name":"自动接单机器人",
+   "version":"1.0",
+   "manifest_version": 2,
+   "description":"超算自动接单神器[功能：自动接单、自动修改难易程度、发送到服务台并顺速抢回]",
+   "icons":{"16":"imgs/icon.png","48":"imgs/icon.png","128":"imgs/icon.png"},
+   "content_scripts": [
+    {
+      "matches": ["https://cc.nsccsz.gov.cn/ticket/*"],
+      "all_frames": true,
+      "js": ["jquery.js", "autoGetTickets.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
